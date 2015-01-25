@@ -1,0 +1,16 @@
+<Config>
+  <Port>8990</Port>
+  <SslPort>8990</SslPort>
+  <EnableSsl>False</EnableSsl>
+  <LaunchBrowser>False</LaunchBrowser>
+  <AuthenticationEnabled>False</AuthenticationEnabled>
+  <Branch>develop</Branch>
+  <LogLevel>Info</LogLevel>
+  <SslCertHash>
+  </SslCertHash>
+  <UrlBase>
+  </UrlBase>
+  <UpdateMechanism>BuiltIn</UpdateMechanism>
+  <BindAddress>*</BindAddress>
+  <AnalyticsEnabled>False</AnalyticsEnabled>
+</Config>

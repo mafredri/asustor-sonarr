@@ -1,0 +1,3 @@
+/usr/lib/libtinyxml2.so
+/usr/lib/libzen.so
+/usr/lib/libmediainfo.so

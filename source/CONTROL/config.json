@@ -1,0 +1,36 @@
+{
+  "general": {
+    "package": "sonarr",
+    "name": "Sonarr (Develop)",
+    "version": "APKG_VERSION",
+    "depends": ["mono-latest"],
+    "conflicts": [],
+    "developer": "Sonarr",
+    "maintainer": "mafredri",
+    "email": "mafredri+adm@gmail.com",
+    "website": "https://sonarr.tv/",
+    "architecture": "ADM_ARCH",
+    "firmware": "2.3.0"
+  },
+  "adm-desktop": {
+    "app": {
+      "port": 8990,
+      "protocol": "http",
+      "type": "custom",
+      "url": "/"
+    },
+    "privilege": {
+      "accessible": "administrators",
+      "customizable": true
+    }
+  },
+  "register": {
+    "boot-priority": {
+      "stop-order": 80,
+      "start-order": 20
+    },
+    "port": [
+      8990
+    ]
+  }
+}
