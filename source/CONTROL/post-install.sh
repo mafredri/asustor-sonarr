@@ -1,40 +1,40 @@
 #!/bin/sh
 
-if [ -z $APKG_PKG_DIR ]; then
+if [ -z "$APKG_PKG_DIR" ]; then
     PKG_DIR=/usr/local/AppCentral/sonarr
 else
     PKG_DIR=$APKG_PKG_DIR
 fi
 
 # Source env variables
-source ${PKG_DIR}/CONTROL/env.sh
+. "${PKG_DIR}/CONTROL/env.sh"
 
 install_sonarr() {
-    tar xzf $PKG_DIR/.release/NzbDrone.*.tar.gz -C $PKG_DIR/
-    mv $PKG_DIR/NzbDrone $PKG_DIR/Sonarr
+    tar xzf "$PKG_DIR"/.release/NzbDrone.*.tar.gz -C "$PKG_DIR/"
+    mv "$PKG_DIR/NzbDrone" "$PKG_DIR/Sonarr"
 }
 
 case "${APKG_PKG_STATUS}" in
     install)
-        if [ ! -f $PKG_CONF/config.xml ]; then
-            cp $PKG_CONF/config_base.xml $PKG_CONF/config.xml
+        if [ ! -f "$PKG_CONF/config.xml" ]; then
+            cp "$PKG_CONF/config_base.xml" "$PKG_CONF/config.xml"
         fi
 
         # If NzbDrone configuration exists, copy it
         if [ -d /volume1/home/admin/.config/NzbDrone ]; then
-            rsync -ra --exclude "config.xml" /volume1/home/admin/.config/NzbDrone/ $PKG_CONF/
+            rsync -ra --exclude "config.xml" /volume1/home/admin/.config/NzbDrone/ "$PKG_CONF/"
         fi
 
-        chown -R $DAEMON_USER $PKG_CONF
+        chown -R "$DAEMON_USER" "$PKG_CONF"
 
         install_sonarr
         ;;
     upgrade)
-        rsync -ra $APKG_TEMP_DIR/config/ $PKG_CONF/
+        rsync -ra "$APKG_TEMP_DIR/config/" "$PKG_CONF/"
 
         # Restore application or extract included version
-        if [ -d $APKG_TEMP_DIR/Sonarr ]; then
-            cp -af $APKG_TEMP_DIR/Sonarr $PKG_DIR/
+        if [ -d "$APKG_TEMP_DIR/Sonarr" ]; then
+            cp -af "$APKG_TEMP_DIR/Sonarr" "$PKG_DIR/"
         else
             install_sonarr
         fi
@@ -43,30 +43,25 @@ case "${APKG_PKG_STATUS}" in
         ;;
 esac
 
-chown -R $DAEMON_USER $PKG_DIR/Sonarr
-
-# Set up Sonarr to use mono-latest
-if [ ! -x $PKG_BIN_PATH/mono ]; then
-    ln -sf $(which mono-latest) $PKG_BIN_PATH/mono
-fi
+chown -R "$DAEMON_USER" "$PKG_DIR/Sonarr"
 
 # Set the NAS ARCH variable
-if [ $(uname -m) == "x86_64" ]; then
+if [ "$(uname -m)" = "x86_64" ]; then
     AS_NAS_ARCH="x86-64"
 else
     AS_NAS_ARCH="i386"
 fi
 
 # Create appropriate symlinks
-(cd $PKG_DIR;
+(cd "$PKG_DIR";
     for i in $AS_NAS_ARCH/*; do
-        name=$(basename $i)
-        if [ -d $name ]; then
+        name=$(basename "$i")
+        if [ -d "$name" ]; then
             for j in $i/*; do
-                ln -sf $j ./$name/;
+                ln -sf "$j" "./$name/"
             done
         else
-            ln -sf $i ./;
+            ln -sf "$i" "./"
         fi
     done)
 
