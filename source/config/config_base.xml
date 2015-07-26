@@ -1,10 +1,10 @@
 <Config>
-  <Port>8990</Port>
-  <SslPort>8990</SslPort>
+  <Port>8989</Port>
+  <SslPort>8989</SslPort>
   <EnableSsl>False</EnableSsl>
   <LaunchBrowser>False</LaunchBrowser>
   <AuthenticationEnabled>False</AuthenticationEnabled>
-  <Branch>develop</Branch>
+  <Branch>master</Branch>
   <LogLevel>Info</LogLevel>
   <SslCertHash>
   </SslCertHash>
