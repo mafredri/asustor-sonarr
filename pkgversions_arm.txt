@@ -1,0 +1,4 @@
+# This file is auto-generated.
+dev-libs/tinyxml2-2.2.0
+media-libs/libzen-0.4.31
+media-libs/libmediainfo-0.7.73

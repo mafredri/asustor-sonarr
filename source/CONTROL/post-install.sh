@@ -46,8 +46,11 @@ esac
 chown -R "$DAEMON_USER" "$PKG_DIR/Sonarr"
 
 # Set the NAS ARCH variable
-if [ "$(uname -m)" = "x86_64" ]; then
+arch=$(uname -m)
+if [ "$arch" = "x86_64" ]; then
     AS_NAS_ARCH="x86-64"
+elif [ "$arch" = "armv7l" ]; then
+    AS_NAS_ARCH="arm"
 else
     AS_NAS_ARCH="i386"
 fi

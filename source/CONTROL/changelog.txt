@@ -1,4 +1,8 @@
-master:
+2.0.0.3530:
+- Updated bundled Sonarr to 2.0.0.3530 (master)
+- ARM Support
+
+2.0.0.3357-r1:
 - Updated Sonarr icon
 
 2.0.0.3357:
