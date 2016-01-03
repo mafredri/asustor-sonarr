@@ -2,17 +2,13 @@
 
 ![Sonarr](https://raw.githubusercontent.com/mafredri/sonarr-apkg/master/source/CONTROL/icon.png)
 
-Sonarr develop branch for ASUSTOR ADM. To be used in conjunction with newer
-[Mono version](https://github.com/mafredri/mono-apkg) (3.10.0, at the time of writing).
+Sonarr for ASUSTOR ADM.
 
 ## Features
 
-* Latest Sonarr develop branch (Bittorrent support!)
 * Built-in automatic updates
-* Does not interfere with NzbDrone package (runs on port 8990)
 * Can migrate existing configuration from NzbDrone
 * Self-contained configuration (stored in /usr/local/AppCentral/sonarr/config)
-* Lightweight, only the required libs present.
 
 ## Word of caution
 
