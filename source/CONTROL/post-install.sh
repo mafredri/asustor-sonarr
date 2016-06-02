@@ -45,27 +45,4 @@ esac
 
 chown -R "$DAEMON_USER" "$PKG_DIR/Sonarr"
 
-# Set the NAS ARCH variable
-arch=$(uname -m)
-if [ "$arch" = "x86_64" ]; then
-    AS_NAS_ARCH="x86-64"
-elif [ "$arch" = "armv7l" ]; then
-    AS_NAS_ARCH="arm"
-else
-    AS_NAS_ARCH="i386"
-fi
-
-# Create appropriate symlinks
-(cd "$PKG_DIR";
-    for i in $AS_NAS_ARCH/*; do
-        name=$(basename "$i")
-        if [ -d "$name" ]; then
-            for j in $i/*; do
-                ln -sf "$j" "./$name/"
-            done
-        else
-            ln -sf "$i" "./"
-        fi
-    done)
-
 exit 0

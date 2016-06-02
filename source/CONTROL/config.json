@@ -2,15 +2,15 @@
   "general": {
     "package": "sonarr",
     "name": "Sonarr",
-    "version": "APKG_VERSION",
+    "version": "VERSION",
     "depends": ["mono"],
     "conflicts": ["NzbDrone"],
     "developer": "Sonarr",
     "maintainer": "mafredri",
     "email": "mafredri+adm@gmail.com",
     "website": "https://sonarr.tv/",
-    "architecture": "ADM_ARCH",
-    "firmware": "2.3.0"
+    "architecture": "ARCH",
+    "firmware": "FIRMWARE"
   },
   "adm-desktop": {
     "app": {
@@ -27,7 +27,7 @@
   "register": {
     "boot-priority": {
       "stop-order": 80,
-      "start-order": 20
+      "start-order": 60
     },
     "port": [
       8989
