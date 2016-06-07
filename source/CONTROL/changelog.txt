@@ -1,3 +1,8 @@
+2.0.0.4146:
+- Updated bundled Sonarr to 2.0.0.4146 (master)
+- Updated libmediainfo
+- Rebuilt libs to support change in ARM arch
+
 2.0.0.3530:
 - Updated bundled Sonarr to 2.0.0.3530 (master)
 - ARM Support

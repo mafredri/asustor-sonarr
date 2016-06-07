@@ -16,7 +16,7 @@ typeset -A arch_list
 arch_list=(
     x86-64 /cross/x86_64-asustor-linux-gnu
     i386 /cross/i686-asustor-linux-gnu
-    arm /cross/armv7a
+    arm /cross/arm-marvell-linux-gnueabi
 )
 
 script_path=${(%):-%x}
