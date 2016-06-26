@@ -1,3 +1,0 @@
-dev-libs/tinyxml2
-media-libs/libzen
-media-libs/libmediainfo
