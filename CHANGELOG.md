@@ -1,3 +1,7 @@
+2.0.0.4326:
+* Add updated sqlite3. The latest Sonarr develop branch uses SQL functions present only in sqlite 3.7.15 and newer.
+* Update bundled Sonarr to 2.0.0.4326 (master)
+
 2.0.0.4146:
 * Updated bundled Sonarr to 2.0.0.4146 (master)
 * Updated libmediainfo
