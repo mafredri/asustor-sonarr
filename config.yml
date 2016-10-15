@@ -3,8 +3,8 @@ ssh: ascross
 
 package: sonarr
 name: Sonarr
-version: 2.0.0.4326
-architecture: ""
+version: 2.0.0.4326-r1
+architecture:
 firmware: 2.6.0
 
 config:

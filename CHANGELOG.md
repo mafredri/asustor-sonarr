@@ -1,3 +1,7 @@
+2.0.0.4326-r1:
+* Update libmediainfo
+* ARM: Rebuild libzen for older GCC ABI (fixes MediaInfo could not be loaded libmediainfo.so.0)
+
 2.0.0.4326:
 * Add updated sqlite3. The latest Sonarr develop branch uses SQL functions present only in sqlite 3.7.15 and newer.
 * Update bundled Sonarr to 2.0.0.4326 (master)
