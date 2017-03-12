@@ -1,3 +1,7 @@
+2.0.0.4645:
+* Update bundled Sonarr release
+* Update libs
+
 2.0.0.4326-r1:
 * Update libmediainfo
 * ARM: Rebuild libzen for older GCC ABI (fixes MediaInfo could not be loaded libmediainfo.so.0)
