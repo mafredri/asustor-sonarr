@@ -1,3 +1,7 @@
+2.0.0.4855:
+* Update bundled Sonarr to 2.0.0.4855
+* Fix for ADM 3.0
+
 2.0.0.4645:
 * Update bundled Sonarr release
 * Update libs
