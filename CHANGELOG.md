@@ -1,3 +1,8 @@
+2.0.1:
+* Separate package versioning from Sonarr versions (to avoid confusion)
+* Update dependencies
+* Update bundled Sonarr to 2.0.0.5085
+
 2.0.0.4855:
 * Update bundled Sonarr to 2.0.0.4855
 * Fix for ADM 3.0
